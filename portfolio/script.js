@@ -1,20 +1,41 @@
+
 let menu = document.querySelector('.fa-solid');
 let ul = document.querySelector('.list');
-let navLinks = document.querySelector('.nav-link ul')
+let nav = document.querySelector('.nav-link');
+let active = document.querySelector('.active');
+let navbar = document.querySelector('.navbar');
+
 document.addEventListener('DOMContentLoaded', function(){
     menu.addEventListener('click',function() {
-        if (ul.style.left === '0%') {
-            ul.style.left = '-100%';
-        }else{
-            ul.style.left='0';
-        }
         ul.classList.toggle('active');
-        navLinks.forEach((link,index) => {
-            if (link.style.animation) {
-                link.style.animation="";
-            }else{
-                link.style.animation= `navLinkFade 0.5s ease forwards ${index / 7}s`
+
+        window.onscroll=()=>{
+            scroll();
+        }
+        function scroll() {
+            if (ul.classList.toggle('active')) {
+                ul.classList.remove('active');
             }
-        });
+
+            if (document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20) {
+                navbar.style.top = "-60%";
+            } else {
+                navbar.style.top = "0%";
+            }
+        }
     });
 });
+
+
+window.onscroll =()=>{
+    scroll2();
+}
+function scroll2() {
+    if (document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20) {
+        navbar.style.top = "-60%";
+    } else {
+        navbar.style.top = "0%";
+    }
+}
