@@ -8,6 +8,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: whitesmoke;
+  overflow-x: hidden;
 }
 .page1{
   height: 100vh;
@@ -75,7 +76,6 @@ body {
 }
 .fa-brands {
   font-size: 1.35vw;
-  -webkit-text-stroke: 1px rgb(20, 209, 193);
 }
 
 /* section, div,p and img and button  */
