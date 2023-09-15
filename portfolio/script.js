@@ -39,17 +39,20 @@ function scroll2() {
   }
 }
 
-let loader = document.getElementById("loader");
 
-document.onreadystatechange = function () {
-  let state = document.readyState;
-  if (state != "complete") {
-    document.querySelector("body").style.visibility = "hidden";
-    loader.style.visibility = "visible";
-  } else {
-    setTimeout(function () {
-      loader.style.visibility = "hidden";
-      document.querySelector("body").style.visibility = "visible";
-    }, 5000);
-  }
-};
+// PRE-LOADER
+
+// let loader = document.getElementById("loader");
+
+// document.onreadystatechange = function () {
+//   let state = document.readyState;
+//   if (state != "complete") {
+//     document.querySelector("body").style.visibility = "hidden";
+//     loader.style.visibility = "visible";
+//   } else {
+//     setTimeout(function () {
+//       loader.style.visibility = "hidden";
+//       document.querySelector("body").style.visibility = "visible";
+//     }, 3000);
+//   }
+// };
