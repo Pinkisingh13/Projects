@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+    width: 100%;
+    background-color: #FAF3F0;
+    /* overflow-x: hidden; */
+    /* padding-top: 20vw; */
+}
+
+.page1{
+ width: 100vw;
+ height: 100vh;
+}
+
+.navbar{
+    /* border:2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 18vh;
+    width: 100vw;
+    background-color: #CAEDFF;
+}
+.navbar h2{
+    /* border: 2px solid green; */
+    height: 8vh;
+    width: 10%;
+    font-size: 2.40vw;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+.ul-container{
+    /* border: 2px solid red; */
+    width: 30vw;
+    height: 13vh;
+}
+.ul-container ul{
+    /* border: 2px solid yellow; */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh; 
+}
+.ul-container ul li a{
+  text-decoration: none;
+  color: #080202; 
+  font-size: 1.20vw;
+  font-family: 'Inconsolata', monospace;
+}
+
+.fa-bars-staggered{
+    display: none;
+}
+
+.fa-xmark{
+    font-size: 1.80vw;
+    display: none;
+}
+
+@media (max-width:600px){
+
+    .navbar{
+        border:2px solid blue;
+        display: flex;
+        justify-content: space-between;
+        height: 18vw;
+        width: 100%;
+    }
+    .ul-container{
+        position: fixed;
+        width: 100%;
+        display: none;
+        min-height: 100%;
+        inset: 0 0 0 30%;
+        background-color: #FFC7EA;
+        /* backdrop-filter: blur(4rem); */
+        border: 2px solid rgb(134, 0, 139);
+        z-index: 20;
+      }
+      .ul-container ul{
+        border: 2px solid red;
+        height: 80%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: 20%;
+      }
+    .ul-container ul li a{
+        color: #080202;
+        font-weight: 600;
+       font-size: 3vh;
+    }
+    .fa-bars-staggered{
+        border: 2px solid green;
+        font-size: 3.50vh;
+        display: block;
+        margin: 8%;
+        z-index: 30;
+    }
+
+    .fa-xmark{
+        font-size: 5vh;
+        display: none;
+        margin: 8%;
+        z-index: 40;
+    }
+
+    .navbar h2{
+        border: 2px solid green;
+        height: 8vw;
+        width: 10%;
+        font-size: 2.40vh;
+        margin:8%;
+    }
+}
+
+
+
