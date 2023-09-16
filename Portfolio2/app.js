@@ -1,59 +1,44 @@
 
-let active = document.querySelector(".active");
 let bar = document.querySelector(".fa-bars-staggered");
+let ulContainer = document.querySelector(".ul-container");
 let close = document.querySelector(".fa-xmark");
-let list = document.querySelector(".list");
-let ulContainer = document.querySelector(".ul-container")
+let list = document.querySelector("ul");
 
+// Creating a media query object
+const mediaQuery = window.matchMedia("(max-width: 600px)");
 
+// Function to handle the media query changes
+function handleMediaQuery(event) {
+  if (event.matches) {
 
- bar.addEventListener("click", function () {
-    if (ulContainer.style.display == "none") {
-        ulContainer.style.display ="block";
-        ulContainer.classList.toggle("active");
-        bar.style.display="none";
-        close.style.display ="block";
-    }else{
-        ulContainer.style.display ="none";
-        bar.style.display="block";
-        close.style.display ="none";
-    }
-})
+    // Inside the media query
+    bar.style.display = "block";
+    ulContainer.style.display = "none";
 
-close.addEventListener("click", function () {
-    if (ulContainer.style.display == "block") {
-        ulContainer.style.display ="none";
-        ulContainer.classList.toggle("active");
-        bar.style.display="block";
-        close.style.display ="none";
-    }else{
-        ulContainer.style.display ="block";
-        bar.style.display="none";
-        close.style.display ="block";
-    }
-})
-// document.addEventListener("DOMContentLoaded", function () {
-//     menu.addEventListener("click", function () {
+    // Event listener for the bar icon to open the menu
+    bar.addEventListener("click", function () {
+      ulContainer.style.display = "block";
+      close.style.display = "block";
+      bar.style.display = "none";
 
-    //    navBox.classList.toggle("active");
-      
+      // Event listener for the close icon to close the menu
+      close.addEventListener("click", function () {
+        ulContainer.style.display = "none";
+        bar.style.display = "block";
+        close.style.display = "none";
+      });
+    });
+  } else {
 
-    //   window.onscroll = () => {
-    //     scroll();
-    //   };
-    //   function scroll() {
-    //     if (ul.classList.toggle("active")) {
-    //       ul.classList.remove("active");
-    //     }
-  
-    //     if (
-    //       document.body.scrollTop > 20 ||
-    //       document.documentElement.scrollTop > 20
-    //     ) {
-    //       navbar.style.top = "-60%";
-    //     } else {
-    //       navbar.style.top = "0%";
-    //     }
-    //   }
-//     });
-//   });
+    // Outside the media query
+    bar.style.display = "none";
+    close.style.display = "none";
+    ulContainer.style.display = "block";
+  }
+}
+
+// Add an event listener for the media query
+mediaQuery.addEventListener("change", handleMediaQuery);
+
+// Initial call to set the initial icon visibility based on the viewport width
+handleMediaQuery(mediaQuery);

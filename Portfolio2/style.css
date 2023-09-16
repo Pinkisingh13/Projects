@@ -36,9 +36,15 @@ body, html{
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
 }
+.navbar h2:hover{
+    cursor: pointer ;
+    transition: all 0.3s ease-in;
+    transform: scale(1.2);
+ }
+
 .ul-container{
     /* border: 2px solid red; */
-    width: 30vw;
+    width: 40vw;
     height: 13vh;
 }
 .ul-container ul{
@@ -49,45 +55,45 @@ body, html{
     align-items: center;
     height: 10vh; 
 }
+.ul-container ul li:hover{
+    border-bottom: 3px solid #CAEDFF;
+    transition: all 0.3s ease-in;
+    transform: scale(1.2);
+}
 .ul-container ul li a{
   text-decoration: none;
   color: #080202; 
-  font-size: 1.20vw;
+  font-size: 1.60vw;
   font-family: 'Inconsolata', monospace;
 }
 
-.fa-bars-staggered{
-    display: none;
-}
-
-.fa-xmark{
-    font-size: 1.80vw;
+ .fa-solid{
     display: none;
 }
 
 @media (max-width:600px){
-
     .navbar{
-        border:2px solid blue;
+        /* border:2px solid blue; */
         display: flex;
         justify-content: space-between;
         height: 18vw;
         width: 100%;
     }
+
     .ul-container{
         position: fixed;
         width: 100%;
-        display: none;
-        min-height: 100%;
+        height: 70%;
+        max-height: 100%;
         inset: 0 0 0 30%;
         background-color: #FFC7EA;
-        /* backdrop-filter: blur(4rem); */
-        border: 2px solid rgb(134, 0, 139);
+        /* border: 2px solid rgb(134, 0, 139); */
         z-index: 20;
-      }
+        transition: all 0.3s ease-in-out;
+      } 
       .ul-container ul{
         border: 2px solid red;
-        height: 80%;
+        height: 100%;
         flex-direction: column;
         justify-content: space-evenly;
         margin-right: 20%;
@@ -98,26 +104,53 @@ body, html{
        font-size: 3vh;
     }
     .fa-bars-staggered{
-        border: 2px solid green;
+        /* border: 2px solid green; */
         font-size: 3.50vh;
         display: block;
         margin: 8%;
         z-index: 30;
+        cursor: pointer;
+    }
+    .fa-bars-staggered:hover{
+        transition: all 0.3s ease-in;
+      transform: scale(1.2);
     }
 
     .fa-xmark{
         font-size: 5vh;
-        display: none;
         margin: 8%;
         z-index: 40;
     }
+    .fa-xmark:hover{
+        transition: all 0.3s ease-in;
+      transform: scale(1.2);
+    }
 
     .navbar h2{
-        border: 2px solid green;
+        /* border: 2px solid green; */
         height: 8vw;
         width: 10%;
-        font-size: 2.40vh;
+        font-size: 3vh;
         margin:8%;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:1028px){
+    .navbar{
+        height: 13%;
+    }  
+    .ul-container ul{
+        /* border: 2px solid red; */
+        margin-top: 3%;
+    }
+    .ul-container ul li a{
+        font-size: 2vw;
+    }
+    .navbar h2{
+        /* border: 2px solid green; */
+        height: max-content;
+        width: max-content;
+        font-size: 4vw;
     }
 }
 
