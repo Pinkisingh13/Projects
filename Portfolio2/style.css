@@ -6,34 +6,37 @@
 body, html{
     height: 100%;
     width: 100%;
-    background-color: #FAF3F0;
-    /* overflow-x: hidden; */
+    /* background-color: #FAF3F0; */
+    background:linear-gradient(to right, #FAF3F0, #ffff);
     /* padding-top: 20vw; */
+    overflow-x: hidden;
 }
 
 .page1{
+ border: 2px solid rgb(189, 0, 31);
  width: 100vw;
  height: 100vh;
 }
 
 .navbar{
-    /* border:2px solid blue; */
+    /* border:2px solid green; */
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: fixed;
     top: 0;
     left: 0;
-    height: 18vh;
+    height: 19vh;
     width: 100vw;
     background-color: #CAEDFF;
+    z-index: 20;
 }
 .navbar h2{
     /* border: 2px solid green; */
-    height: 8vh;
+    height: 10vh;
     width: 10%;
-    font-size: 2.40vw;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 2.50vw;
+    font-family: 'Playfair Display', serif;
     cursor: pointer;
 }
 .navbar h2:hover{
@@ -44,7 +47,7 @@ body, html{
 
 .ul-container{
     /* border: 2px solid red; */
-    width: 40vw;
+    width: 35vw;
     height: 13vh;
 }
 .ul-container ul{
@@ -63,15 +66,138 @@ body, html{
 .ul-container ul li a{
   text-decoration: none;
   color: #080202; 
-  font-size: 1.60vw;
-  font-family: 'Inconsolata', monospace;
+  font-size: 1.30vw;
+  font-family: 'Playfair Display', serif;;
 }
 
  .fa-solid{
     display: none;
 }
 
-@media (max-width:600px){
+/* SECTION-1 */
+.section-1{
+    /* border: 2px solid blue; */
+    height: 80vh;
+    width:100vw;
+    margin-top:8.80vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.section-1 img{
+    /* border: 2px solid yellow; */
+    height: 40vh;
+    width: 22vw;
+}
+.section-1 .p-box{
+    /* border: 2px solid rgb(222, 3, 3); */
+    line-height: 4vw;
+    width: 20vw;
+    height: 30vh;
+    font-family: 'Inconsolata', monospace;
+}
+.hello{
+    font-size: 2.50vw;
+    font-weight: 600 ;
+    line-height: 3.50vw;
+}
+.darkpink{
+    color: #F31559;
+}
+.resume{
+    color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+.line{
+    display: inline-block;
+    border: 1px solid #9d9d9d;
+    width: 4vw;
+    margin-left:4%;
+    margin-bottom: 1%;
+}
+
+.page2{
+    height:100vh;
+    width: 100vw;
+    border: 2px solid midnightblue;
+}
+.container{
+    border: 2px solid yellowgreen;
+    width: 70vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #EEEEEE;
+    margin-left:12vw;
+    margin-top: 5vw;
+    align-items: center;
+}
+.newsletter-p-box{
+  /* border:2px solid purple; */
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.newsletter-p-box .newsletter{
+    padding: 0.5em;
+    font-size: 1.80vw;
+    font-weight: bolder;
+}
+.newsletter-p-box .lorem-para{
+    font-size: 1vw;
+    margin-left: 2vw;
+    color: #a7a7a7;
+}
+.input-box{
+/* border: 2px solid orangered; */
+width:28vw ;
+height: 12vh;
+display: flex;
+align-items: center;
+/* flex-wrap: wrap; */
+box-shadow: 0px 0px 1em gray;
+}
+.email-box{
+   height: 4vh;
+   width:17vw ;
+   border: none;
+   background-color: #EEEEEE;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(197, 197, 197);
+    opacity: 1; /* Firefox */
+    font-size: 15px;
+    text-align: center;
+  }
+.subscribe{
+    /* border: 2px solid pink; */
+    width: fit-content;
+    font-weight: 0.2vw;
+    color: #636363;
+}
+.fa-regular{
+    height: 3vh;
+    width: 2vw;
+    font-weight: 600;
+    font-size: 1vw;
+    /* border: 2px solid red; */
+    text-align: center;
+    margin-top: 0.30vw;
+    margin-left: 0.50vh;
+}
+
+
+
+/* MEDIA QUERY */
+@media screen and (max-width:600px) and (orientation: portrait){
+    .page1{
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 83vw;
+       }
     .navbar{
         /* border:2px solid blue; */
         display: flex;
@@ -92,7 +218,7 @@ body, html{
         transition: all 0.3s ease-in-out;
       } 
       .ul-container ul{
-        border: 2px solid red;
+        /* border: 2px solid red; */
         height: 100%;
         flex-direction: column;
         justify-content: space-evenly;
@@ -101,7 +227,7 @@ body, html{
     .ul-container ul li a{
         color: #080202;
         font-weight: 600;
-       font-size: 3vh;
+       font-size: 2vh;
     }
     .fa-bars-staggered{
         /* border: 2px solid green; */
@@ -128,30 +254,223 @@ body, html{
 
     .navbar h2{
         /* border: 2px solid green; */
-        height: 8vw;
-        width: 10%;
-        font-size: 3vh;
+        height: fit-content;
+        width: fit-content;
+        font-size: 2em;
         margin:8%;
+    }
+    .section-1{
+        /* border: 2px solid blue; */
+        height: 60vw;
+        width:100%;
+        margin-top:17.94%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .section-1 img{
+        /* border: 2px solid yellow; */
+        height: 40vw;
+        width: 25vh;
+    }
+    .section-1 .p-box{
+        /* border: 2px solid rgb(207, 228, 12); */
+        line-height: 3vh;
+        width: 15vh;
+        height: 29vw;
+    }
+    .hello{
+        font-size: 2vh;
+        font-weight: bolder ;
+        line-height: 2.50vh;
+    }
+    .darkpink{
+        color: #F31559;
+    }
+    .resume{
+        color: rgb(44, 44, 44);
+        font-size: 1.20vh;
+    }
+    .line{
+        display: inline-block;
+        border: 1px solid #636363;
+        border-radius: 1px;
+        width: 3vh;
+        margin-left:4%;
+        margin-bottom: 1%;
+    }
+
+    /*MEDIA-QUERY OF  PAGE-2 */
+    .page2{
+        height:80vw;
+        width: 100vw;
+        border: 2px solid midnightblue;
+    }
+    .container{
+        border: 2px solid yellowgreen;
+        width: 50vh;
+        height: 16vw;
+        margin-left:3vh;
+        margin-top: 5vh;
+    }
+    .newsletter-p-box{
+      border:2px solid purple;
+      width: 16vh;
+    }
+    .newsletter-p-box .newsletter{
+        font-size: 1.80vh;
+        font-weight: bolder;
+    }
+    .newsletter-p-box .lorem-para{
+        font-size: 0.80vh;
+    }
+    .input-box{
+    border: 2px solid orangered;
+    width:33vh;
+    height: 12vw;
+    }
+    .email-box{
+        border: 2px solid blue;
+       height: 7vw;
+       width:15vh;
+       /* border: none; */
+       background-color: #EEEEEE;
+    }
+    .subscribe{
+        border: 2px solid pink;
+        width: 15vh;
+        color: #636363;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 3vw;
+    }
+    .fa-regular{
+        height: 3vw;
+        width: 2vh;
+        font-weight: 600;
+        font-size: 1.50vh;
+        /* border: 2px solid red; */
     }
 }
 
-@media screen and (min-width:700px) and (max-width:1028px){
+@media screen and (min-width:601px) and (max-width:1028px) and (orientation: portrait){
+    .page1{
+        /* border: 2px solid red; */
+        width: 100vw;
+        height: 45vh;
+       }
     .navbar{
-        height: 13%;
+        height: 10%;
     }  
+    .ul-container{
+        /* border: 2px solid blue; */
+        height: 8vh;
+        width: 50vw;
+    }
     .ul-container ul{
         /* border: 2px solid red; */
-        margin-top: 3%;
+        height: fit-content;
+        margin-top: 6%;
+        align-items: center;
     }
     .ul-container ul li a{
-        font-size: 2vw;
+        font-size: 1em;
     }
     .navbar h2{
         /* border: 2px solid green; */
         height: max-content;
         width: max-content;
-        font-size: 4vw;
+        font-size: 2em;
+        margin-left: 5%;
     }
+    .section-1{
+        /* border: 2px solid rgb(0, 0, 0); */
+        height: 30vh;
+        width:100%;
+        margin-top:10vh;
+    }
+    .section-1 img{
+        /* border: 2px solid yellow; */
+        height: 60%;
+        width: 30%;
+       max-height: 40vw;
+        max-width: 40vh;
+    }
+    .section-1 .p-box{
+        /* border: 2px solid rgb(222, 3, 3); */
+        line-height: 4vw;
+        width: 30%;
+        height: 15vh;
+    }
+    .hello{
+        font-size: 4vw;
+        font-weight: 600 ;
+        line-height: 5vw;
+    }
+    .darkpink{
+        color: #F31559;
+    }
+    .resume{
+        color: rgb(62, 62, 62);
+        font-size: 1.60vw;
+    }
+    .line{
+        display: inline-block;
+        border: 1px solid #9d9d9d;
+        width: 4vw;
+        margin-left:4%;
+        margin-bottom: 1%;
+    }
+}
+@media screen and(orientation:landscape) and(max-width:1030){
+    .page1{
+        /* border: 2px solid rgb(201, 0, 0); */
+        width: 100vw;
+        height: 100%;
+       }
+    .navbar{
+        height: 6rem;
+    }
+    .section-1{
+        /* border: 2px solid yellow; */
+        height: 70%;
+        width: 100vw;
+        margin-top:9.98%;
+    }
+    .ul-container{
+        /* border: 2px solid red; */
+        width: 25em;
+        margin-left: 17%;
+        height:70%;
+    }
+    .section-1 .p-box{
+        /* border: 2px solid green; */
+       width: 18vw;
+       height: 23vh;
+    }
+    .ul-container ul{
+        /* border: 2px solid yellow; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh; 
+    }
+    .ul-container ul li a{
+        font-size: 1.20em;
+        font-weight: 600;
+        font-family: 'Playfair Display', serif;
+        /* border: 2px solid pink; */
+    }
+
+    .navbar h2{
+        /* border: 2px solid green; */
+        height: fit-content;
+        width: 4em;
+        font-size: 2em;
+        font-family: 'Playfair Display', serif;
+        cursor: pointer;
+    }
+
+
 }
 
 
