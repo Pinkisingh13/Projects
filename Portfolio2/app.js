@@ -42,3 +42,6 @@ mediaQuery.addEventListener("change", handleMediaQuery);
 
 // Initial call to set the initial icon visibility based on the viewport width
 handleMediaQuery(mediaQuery);
+
+
+
