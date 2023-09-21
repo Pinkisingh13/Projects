@@ -10,45 +10,49 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Inconsolata&family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:opsz,wght@9..40,500&family=Inconsolata&family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <title>PortFolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
     <link rel="icon" href="./assets/web-logo.png" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="design.css" />
+    <link rel="stylesheet" href="media.css">
   </head>
   <body>
     <div class="page1">
-      <nav class="navbar">
+      <nav>
         <h2>Marsi.</h2>
         <div class="ul-container">
-          <ul class="list">
+          <ul>
             <li><a href="">Home</a></li>
             <li><a href="">About us</a></li>
             <li><a href="">Projects</a></li>
             <li><a href="">Contact</a></li>
           </ul>
         </div>
-        <i class="fa-solid fa-bars-staggered" style="color: #000000"></i>
-        <i class="fa-solid fa-xmark" style="color: #000000"></i>
+          <i class="fa-solid fa-bars-staggered" style="color: #000000"></i>
+          <i class="fa-solid fa-xmark" style="color: #000000"></i>
       </nav>
       <section class="section-1">
+        <img src="./assets/men-image.png" alt="" />
         <div class="p-box">
           <p class="hello">
-            Hello, I'M Marlon Simon <span class="darkpink">UX-UI Designer</span>
+            Hello, I'M <br>Marlon Simon <br><span class="darkpink">UX-UI Designer</span>
           </p>
-          <p class="resume">Download Resume<span class="line"></span></p>
         </div>
-        <img src="./assets/men-image.png" alt="" />
       </section>
+        <div class="one">
+          <div class="text">WANT TO KNOW ME?<br></div>
+             <div class="highlight">LET'S BEGIN </div>
+        </div>
     </div>
 
     <!-- PAGE-2 -->
     <div class="page2">
-      <div class="container">
+      <!-- <div class="container">
         <div class="newsletter-p-box">
           <p class="newsletter">Newsletter</p>
           <p class="lorem-para">
@@ -59,18 +63,17 @@
           <input
             type="email"
             class="email-box"
-            placeholder="Enter your email"
-          />
+            placeholder="Enter your email"/>
           <p class="subscribe">Subscribe Now</p>
           <i class="fa-regular fa-angles-right"></i>
         </div>
-      </div>
+      </div> -->
       <section class="section-2">
         <div class="skill-box">
           <img src="./assets/house.png" alt="" />
 
           <div class="head-para-skill-name">
-            <h2>My Best Skills</h2>
+            <h2 class=".head">My Best Skills</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
               quam. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
@@ -79,25 +82,27 @@
             <div class="skill-name">
               <ul>
                 <li>UI-UX Design</li>
-                <li class="weight">98%</li>
+                <div class="stats">
+                  <span class="progress-bar"> 78%</span>
+                </div>
               </ul>
             </div>
             <div class="skill-name">
               <ul>
                 <li>Animation</li>
-                <li class="weight">98%</li>
+                <div class="stats"><span class="progress-bar2">90%</span></div>
               </ul>
             </div>
             <div class="skill-name">
               <ul>
                 <li>Graphic</li>
-                <li class="weight">98%</li>
+                <div class="stats"><span  class="progress-bar3">74%</span></div>
               </ul>
             </div>
             <div class="skill-name">
               <ul>
                 <li>Marketing</li>
-                <li class="weight">98%</li>
+                <div class="stats"><span class="progress-bar4">83%</span></div>
               </ul>
             </div>
             </div>
@@ -105,6 +110,8 @@
         </div>
       </section>
     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app.js"></script>
   </body>
 </html>
