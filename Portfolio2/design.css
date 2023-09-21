@@ -191,23 +191,23 @@ nav h2 {
 }
 .progress-bar { 
 background: linear-gradient(to top, #cf23cf, #b688b4);
-  animation: skill1 1s linear forwards;
+  animation: skill1 2s  2s linear forwards;
 }
 .progress-bar2 {
  background: linear-gradient(to top, #cf23cf, #b688b4); 
-  animation: skill2 1s linear forwards;
+  animation: skill2 1s  2s linear forwards;
 }
 .progress-bar3 {
  background: linear-gradient(to left, #cf23cf, #b688b4);
-  animation: skill3 1s linear forwards;
+  animation: skill3 1s 2s linear forwards;
 }
 .progress-bar4 {
 background: linear-gradient(to top, #cf23cf, #b688b4);
-  animation: skill4 1s linear forwards;
+  animation: skill4 1s  2s linear forwards;
 }
 .progress-bar5 {
   background: linear-gradient(to top, #cf23cf, #b688b4);
-  animation: skill5 1s linear forwards;
+  animation: skill5 1s 2s linear forwards;
 }
 @keyframes skill1 {
   100% {
